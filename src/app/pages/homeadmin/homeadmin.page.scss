@@ -1,0 +1,99 @@
+ion-toolbar{
+    --background: rgb(255, 184, 52);
+    ion-img{
+      width: 35%;
+      padding-top: 10px;
+    }
+    ion-icon{
+      color:rgb(252, 250, 246);
+      font-size:50px;
+      padding: 10px 10px 0px 0px;
+    }
+    padding-bottom: 20px;
+  }
+  
+  .productos{
+    align-items: center;
+  }
+  
+  ion-footer{
+    align-self: center;
+    background:  rgb(255, 184, 52);
+    ion-toolbar{
+      --background: rgb(255, 184, 52);
+      border-radius: 35px 35px 0px 0px;
+      ion-icon{
+        color:rgb(255, 255, 255);
+        font-size: 35px;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+      }
+      ion-label{
+        text-align: center;
+        font-size: 15px;
+        text-transform: none;
+        padding: 0 0 0 0;
+        margin: bottom;
+      }
+      ion-segment-button{
+        padding-left: 16%;
+        margin: right;
+        --indicator-color : transparent!important;
+        --color-checked: white;
+      }
+    }
+  }
+  
+  ion-content{
+    --background: rgb(255, 255, 255);
+    ion-item{
+      --background: rgba(255, 255, 255, 0);
+      color: rgb(80, 80, 80);
+    }
+    ion-card{
+      width: 40%;
+    }
+    div{
+      width: 240%;
+      ion-card{
+        background: rgb(255, 255, 255);
+        img{
+          width: 100%;
+        }
+        p{
+          color:black;
+          font-size: larger;
+        }
+      }
+      
+    }
+  }
+
+
+
+ion-accordion::part(content){
+    padding: 10px;
+    background-color: rgb(255, 184, 52);
+}
+
+ion-accordion::part(header){
+    padding: 10px;
+    background:rgb(255, 184, 52);
+}
+
+ion-accordion.accordion-expanded ion-item[slot="header"] {
+    --background:var(--ion-color-warning);
+    --color: #fff;
+}
+
+ion-accordion.accordion-expanding [slot="content"], 
+ion-accordion.accordion-expanded [slot="content"] {
+    --ion-item-background: #ebe9e2ec;
+    --ion-item-color: #fff;
+    ion-button{
+      background: rgb(5, 5, 5);
+      background-color: rgba(0, 0, 0, 0);
+      padding-left: 7%;
+     }
+}
+

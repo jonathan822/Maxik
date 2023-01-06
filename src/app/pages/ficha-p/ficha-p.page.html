@@ -1,0 +1,35 @@
+<ion-content>
+
+  <ion-row style="margin-top:15%;">
+    <ion-col size="12">
+      <ion-item>
+        <img src="../../../assets/cocacola.jpg" alt="">
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12" style="margin-top:-4%;">
+      <h1>{{ficha.nombre}}</h1>
+      <h4 style="margin-top:-3%;">{{ficha.stock}}</h4>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item style="margin-bottom:5%;">
+        <ion-label position="stacked">Descripción</ion-label>
+        <ion-textarea readonly rows="2">{{ficha.descripcion}}</ion-textarea>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-item>
+        <ion-label>Cantidad:</ion-label>
+        <ion-button style="margin-top:-1%;" (click)="decrementQty()"><ion-icon name="remove-circle" ></ion-icon></ion-button>
+        <ion-label style="text-align: center; margin-right: -12%;">{{cant}}</ion-label>
+        <ion-button style="margin-right:10%; margin-top:-1%;" (click)="incrementQty()"><ion-icon name="add-circle" ></ion-icon></ion-button>
+      </ion-item>
+      <ion-button (click)="btnAgregarCarrito()">$ {{ficha.precio * cant}}</ion-button>
+    </ion-col>
+    
+  </ion-row> 
+  
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-content>
+  <swiper style="height: 170px;" [autoplay]="true">
+    <ng-template swiperSlide><img src="assets/slide.jpg" /></ng-template>
+    <ng-template swiperSlide><img src="assets/XD3.png" /></ng-template>
+    <ng-template swiperSlide><img src="assets/test6 (2).png" /></ng-template>
+    <ng-template swiperSlide><img src="assets/payment.png" /></ng-template>
+  </swiper>
+
+  <ion-item lines="none" style="padding-left: 6px; padding-top: 10px;">
+    <ion-select placeholder="Selecciona una tienda" (ionChange)="listarProductos($event)">
+      <ion-select-option *ngFor="let tienda of listaTiendas" [value]="tienda">{{tienda.nombre}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngFor="let producto of listaProductos" class="productos">
+    <ion-card  style="margin-top: 30px;" (click)="abrirModalp(producto.id)">
+      <ion-card-header>
+        <img  class="img-card" src="assets/cocacola.jpg"/>
+        <ion-card-title style="font-weight: bold; color: black;">{{producto.nombre}}</ion-card-title>
+      </ion-card-header>        
+      <ion-card-content>
+        <p>{{producto.descripcion}}</p>
+        <p>${{producto.precio}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

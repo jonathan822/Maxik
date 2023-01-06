@@ -1,0 +1,65 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Historial de compra</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-list *ngFor="let item of historial; let i = index" [attr.data-index]="i"
+    style="background:rgba(255, 255, 255, 0);">
+    <ion-item lines="full" style="--background:rgba(255, 255, 255, 0);" (click)="setOpen(true, item.id, i+1)">
+      <ion-label style="color: black;">Compra N° {{i+1}}</ion-label>
+      <p style="color: rgb(0, 169, 221); float: right; font-size: 14px;">Ver</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-modal [isOpen]="isModalOpen" [backdropDismiss]="false">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Compra N°{{actualIndex}}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+
+        <div *ngIf="!estadoBoton">
+          <ion-list *ngFor="let p of registro; let pi = index" [attr.data-index]="pi"
+          style="background:rgba(255, 255, 255, 0);">
+          <ion-item lines="full" style="--background:rgba(255, 255, 255, 0);">
+            <ion-label style="color: black;">{{p.nombre}} <p>Cantidad: {{p.cantidad}}</p>
+              <p>Valor total:{{p.cantidad * p.precio}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 10%;" *ngIf="estadoBoton">
+          <img src="assets/QRexample.png" style="width:200px; height:200px; margin: auto;">
+        </div>
+
+
+      </ion-content>
+
+      <ion-footer class="ion-no-border">
+        <ion-button expand="full" *ngIf="!estadoBoton" (click)="estadoBoton = true"
+          style="margin-left: 0; margin-right: 0; margin-bottom: 0; height: 100%; --background: rgb(255, 187, 0); --box-shadow: none;">
+          <p style="margin: auto">Ver Qr</p>
+        </ion-button>
+        <ion-button expand="full" *ngIf="estadoBoton" (click)="estadoBoton = false"
+          style="margin-left: 0; margin-right: 0; margin-bottom: 0; height: 100%; --background: rgb(255, 187, 0); --box-shadow: none;">
+          <p style="margin: auto">Ver Datos</p>
+        </ion-button>
+      </ion-footer>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

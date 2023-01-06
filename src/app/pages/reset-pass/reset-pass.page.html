@@ -1,0 +1,17 @@
+<ion-header class=ion-no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="login-box">
+    <img class="logo" src="../../../assets/icon/logo.png">
+    <h1>Olvidaste tu contraseña?</h1>
+    <p class="p-text">Ingresa tu direccion de correo electronico para restablecer una nueva contraseña</p>
+    <p>Correo Electronico</p>
+    <ion-input [(ngModel)]="EmailForm.email"></ion-input>
+    <ion-button (click)="resetPass()">Recuperar</ion-button><br>
+  </div>
+</ion-content>

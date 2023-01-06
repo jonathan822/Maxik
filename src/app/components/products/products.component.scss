@@ -1,0 +1,31 @@
+ion-content{
+    --background: rgb(255, 255, 255);
+    ion-item{
+      --background: rgba(255, 255, 255, 0);
+      color: rgb(80, 80, 80);
+    }
+    ion-card{
+      width: 40%;
+    }
+    div{
+      width: 240%;
+      ion-card{
+        background: rgb(255, 255, 255);
+        img{
+          width: 100%;
+        }
+        p{
+          color:black;
+          font-size: larger;
+        }
+      }
+      
+    }
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+  }

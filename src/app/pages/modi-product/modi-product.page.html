@@ -1,0 +1,39 @@
+<ion-header class=ion-no-border>
+  <ion-toolbar class=ion-no-border>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-text-center">
+    <h1>Modificar producto</h1>
+  </div>
+  
+  <p>Nombre:</p>
+  <ion-input value="{{prod.nombre}}" [(ngModel)]="prod.nombre"></ion-input>
+
+  <p>Descripcion:</p>
+  <ion-input value="{{prod.descripcion}}" [(ngModel)]="prod.descripcion"></ion-input>
+  
+  <p>Precio:</p>
+  <ion-input style="margin-bottom: px;" value="{{prod.precio}}" [(ngModel)]="prod.precio"></ion-input>
+
+  <p>Stock:</p>
+  <ion-input value="{{prod.stock}}" [(ngModel)]="prod.stock"></ion-input>
+
+  <div class="alert-danger">
+    <div *ngIf="Validmessage == 1" class="container-error-message">
+      Todos los campos son obligatorios
+    </div>
+    <div *ngIf="Validmessage == 2" class="container-error-message">
+      
+    </div>
+  </div>
+
+  <div class="ion-text-center">
+    <ion-button (click)="modificar()">Modificar</ion-button>
+  </div>
+</ion-content>

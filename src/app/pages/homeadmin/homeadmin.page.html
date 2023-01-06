@@ -1,0 +1,54 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <ion-img src="../../assets/icon/logo.png"></ion-img>
+    </ion-title>
+    <ion-icon slot="end"></ion-icon>
+    <ion-icon slot="end" name="log-out-outline" (click)="logout()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item lines="none" style="padding-left: 6px; padding-top: 10px;">
+    <ion-select placeholder="Selecciona una tienda" (ionChange)="listarProductos($event)">
+      <ion-select-option *ngFor="let tienda of listaTiendas" [value]="tienda">{{tienda.nombre}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+<ion-accordion-group *ngFor="let producto of listaProductos" multiple="true" expand="inset">
+  <ion-accordion>
+    <ion-item slot="header">
+      <ion-label>{{producto.nombre}},    stock: {{producto.stock}}</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+<ion-item>
+  <ion-label>${{producto.precio}}</ion-label>
+</ion-item>
+<ion-item>
+  <ion-label>{{producto.descripcion}}</ion-label>
+</ion-item>
+<div>
+  <ion-button (click)="modi(producto.id)">modificar</ion-button>
+<ion-button (click)="presentAlert(producto.id)">Eliminar</ion-button>
+</div>
+    </ion-list>
+  </ion-accordion>
+</ion-accordion-group>
+
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-segment scrollable="true" value="products" (ionChange)="segmentChanged($event)">
+
+      <ion-segment-button value="products" (click)="irAagregar()">
+        <ion-icon name="add-outline"></ion-icon>
+        <ion-label>Agregar producto</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

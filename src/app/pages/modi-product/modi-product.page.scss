@@ -1,0 +1,110 @@
+ion-toolbar{
+    --background:rgb(255, 196, 4);
+ }
+ 
+
+ion-content {
+    --background: rgb(255, 196, 4);
+    
+}
+
+
+.login-box{
+    background: rgb(255, 196, 4);
+    margin-top: 100px;
+    border-radius: 20px;
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    //box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.37);
+    padding-bottom: 15px;
+    transition: 1s;
+}
+
+ion-input{
+    --color: rgb(0,0,0);
+    --background: rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+ion-button{
+    --color: rgb(255, 255, 255);
+    --background: rgb(255,140,0);
+    width: 79%;
+    --margin: auto;
+    --border-radius: 20px;
+    --padding-top: 30px;
+    --padding-bottom: 30px;
+    --box-shadow: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 80px;
+    margin-top: 10vh;
+    font-size: 20px;
+}
+
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 0;
+}
+
+.p1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 10%;
+    color: rgb(255, 255, 255);
+    text-decoration: underline rgb(255, 255, 255);  
+    font-weight: bold;
+}
+
+.label1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-align: right;
+}
+
+.label2{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: underline rgb(255, 255, 255);  
+}
+
+h1{
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+
+.logo{
+    width:70%; 
+    margin-top: -80px;
+}
+
+.alert-danger{
+    text-align: center;
+    color: #721c24;
+    background:#f8d7da;
+    border-color:#f5c6cb;
+    margin-bottom: 5px;
+}
+
+.container-error-message{
+    padding: 3px;
+}

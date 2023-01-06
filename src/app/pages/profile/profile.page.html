@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div>
+  <ion-icon class="icon" slot="end" name="person-circle-outline" ></ion-icon>
+</div>
+  
+
+  <ion-item>
+    <ion-label class="textdisable" position="relative">Nombre: &nbsp; </ion-label>
+    <ion-input disabled>{{uid.nombre}}</ion-input>
+    <ion-buttons slot="end" color=primary (click)="alerta('Nombre')">
+      <ion-icon name="create" color="black "></ion-icon>
+    </ion-buttons>
+  </ion-item>
+
+
+  <ion-item>
+
+    <ion-label class="textdisable">Apellido: &nbsp;</ion-label>
+    <ion-buttons slot="end" color=primary (click)="alerta('Apellido')">
+      <ion-icon name="create" color="black "></ion-icon>
+    </ion-buttons>
+    <ion-input disabled>{{uid.apellido}}</ion-input>
+
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="textdisable">Fecha de Nacimiento: &nbsp;</ion-label>
+    <ion-input disabled>{{uid.Fecha_nac}}</ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="textdisable">Género: &nbsp;</ion-label>
+    <ion-input disabled>{{uid.Genero}}</ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="textdisable">Correo: &nbsp;</ion-label>
+    <ion-buttons slot="end" color=primary (click)="presentAlertacorreo()">
+      <ion-icon name="create" color="black "></ion-icon>
+    </ion-buttons>
+    <ion-input disabled>{{uid.email}}</ion-input>
+  </ion-item>
+
+  <ion-item style="margin-top: 45px">
+    <ion-label class="textdisable">Contraseña: &nbsp;</ion-label>
+    <ion-input disabled>******</ion-input>
+  </ion-item>
+
+
+</ion-content>

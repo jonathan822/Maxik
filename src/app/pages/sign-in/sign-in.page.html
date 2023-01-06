@@ -1,0 +1,48 @@
+<ion-header class=ion-no-border>
+  <ion-toolbar class=ion-no-border>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-text-center">
+    <h1>Registro de cuenta</h1>
+  </div>
+
+
+  <p>Nombre</p>
+  <ion-input [(ngModel)]="newUserFields.name"></ion-input>
+
+
+  <p>Apellido</p>
+  <ion-input [(ngModel)]="newUserFields.surname"></ion-input>
+
+
+
+  <p>Correo</p>
+  <ion-input [(ngModel)]="newUserFields.email"></ion-input>
+
+
+  <p>Contraseña</p>
+  <ion-input [(ngModel)]="newUserFields.password" type="password" style="margin-bottom: px;"></ion-input>
+
+
+  <p>Repetir Contraseña</p>
+  <ion-input [(ngModel)]="newUserFields.confirmpassword" type="password" style="margin-bottom: px;"></ion-input>
+  <div class="alert-danger">
+    <div *ngIf="Validmessage == 1" class="container-error-message">
+      Todos los campos son obligatorios
+    </div>
+    <div *ngIf="Validmessage == 2" class="container-error-message">
+      Las contraseñas son incorrectas 
+    </div>
+
+  </div>
+
+  <ion-button (click)="btnCreateUser()">Registrar</ion-button>
+
+
+</ion-content>
