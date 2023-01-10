@@ -3,11 +3,13 @@
     <ion-title>
       <ion-img src="../../assets/icon/logo.png"></ion-img>
     </ion-title>
+    <ion-icon slot="end" name="wallet" (click)="gowallet()"></ion-icon>
     <ion-icon slot="end" name="cart-outline" (click)="btnCarrito()"></ion-icon>
     <ion-icon slot="end" name="person-circle-outline" (click)="abrirModal()"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
+<!-- Erro del inicio (Inicio vacio)-->
 <ion-content>
   <ion-router-outlet></ion-router-outlet>
 </ion-content>
@@ -15,7 +17,7 @@
 <ion-footer class="ion-no-border">
   <ion-toolbar>
     <ion-segment scrollable="true" value="products" (ionChange)="segmentChanged($event)">
-      
+     
       <ion-segment-button value="products">
         <ion-icon name="home"></ion-icon>
         <ion-label>Principal</ion-label>
@@ -37,4 +39,5 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
+
 </ion-footer>

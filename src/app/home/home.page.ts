@@ -31,6 +31,11 @@ export class HomePage {
     await modal.present();
   }
 
+  async gowallet(){
+    this.router.navigate(['usuwallet/']);
+  }
+
+
   async btnCarrito(){
     const modal= await this.modalCtrl.create({
       component: ShoppingCartPage,

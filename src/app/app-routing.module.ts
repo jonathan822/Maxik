@@ -67,6 +67,16 @@ const routes: Routes = [
     path: 'modal',
     loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
   },
+  {
+    path: 'admwallet',
+    loadChildren: () => import('./pages/admwallet/admwallet.module').then( m => m.AdmwalletPageModule)
+  },
+  {
+    path: 'usuwallet',
+    loadChildren: () => import('./pages/usuwallet/usuwallet.module').then( m => m.UsuwalletPageModule)
+  },
+
+
 ];
 
 
