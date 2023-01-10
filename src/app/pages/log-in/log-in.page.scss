@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
 
 ion-content {
-    --background: rgb(255, 196, 4);
+    --background: rgb(250, 187, 71);
 }
 
 .login-box{
-    background: rgb(255, 196, 4);
+    background: rgb(250, 187, 71);
     margin-top: 100px;
     border-radius: 20px;
     text-align: center;
@@ -43,7 +43,7 @@ ion-button{
     --box-shadow: none;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    margin-bottom: 80px;
+    margin-bottom: 60px;  //Cambio de 80 a 60 (correcion para IOS)
     margin-top: 10vh;
     font-size: 20px;
 }

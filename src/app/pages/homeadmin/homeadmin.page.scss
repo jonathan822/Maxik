@@ -18,9 +18,9 @@ ion-toolbar{
   
   ion-footer{
     align-self: center;
-    background:  rgb(255, 184, 52);
+    background:  rgb(233, 183, 90);
     ion-toolbar{
-      --background: rgb(255, 184, 52);
+      --background: rgb(233, 183, 90);
       border-radius: 35px 35px 0px 0px;
       ion-icon{
         color:rgb(255, 255, 255);
@@ -73,12 +73,12 @@ ion-toolbar{
 
 ion-accordion::part(content){
     padding: 10px;
-    background-color: rgb(255, 184, 52);
+    background-color: rgb(233, 183, 90);
 }
 
 ion-accordion::part(header){
     padding: 10px;
-    background:rgb(255, 184, 52);
+    background:rgb(233, 183, 90);
 }
 
 ion-accordion.accordion-expanded ion-item[slot="header"] {

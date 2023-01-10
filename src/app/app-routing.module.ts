@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'log-in',
+    redirectTo: 'homeadmin',
     pathMatch: 'full'
   },
   {
@@ -67,6 +67,11 @@ const routes: Routes = [
     path: 'modal',
     loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
   },
+  {
+    path: 'wallet',
+    loadChildren: () => import('./pages/wallet/wallet.module').then( m => m.WalletPageModule)
+  },
+
 ];
 
 

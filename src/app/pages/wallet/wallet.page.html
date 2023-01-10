@@ -1,0 +1,20 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <ion-img src="../../assets/icon/logo.png"></ion-img>
+    </ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none" style="padding-left: 6px; padding-top: 10px;">
+    <ion-select placeholder="Selecciona un Usuario" (ionChange)="listarProductos($event)"> <!--Añadir lista de usuarios-->
+      <ion-select-option *ngFor="let tienda of listaTiendas" [value]="tienda">{{tienda.nombre}}</ion-select-option> <!--Cambiar valores-->
+    </ion-select>
+  </ion-item>
+
+</ion-content>
