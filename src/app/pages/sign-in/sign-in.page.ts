@@ -16,6 +16,7 @@ export class SignInPage implements OnInit {
   newUserFields = {
     name: '',
     surname: '',
+    rut: '',
     email: '',
     password: '',
     confirmpassword: ''
@@ -34,12 +35,14 @@ export class SignInPage implements OnInit {
     } else if (this.newUserFields.surname == "") {
       this.presentToast("El campo de apellido esta incompleto");
     } else if (this.newUserFields.email == "") {
+      this.presentToast("El campo de Rut esta incompleto");
+    } else if (this.newUserFields.rut == "") {
       this.presentToast("El campo de email esta incompleto");
     } else if (this.newUserFields.password == "") {
       this.presentToast("El campo de contraseña esta incompleto");
     } else if (this.newUserFields.confirmpassword == "") {
       this.presentToast("El campo de repetir contraseña esta incompleto");
-    } else if (this.newUserFields.name == "" || this.newUserFields.surname == "" || this.newUserFields.email == "" || this.newUserFields.password == "" || this.newUserFields.confirmpassword == "") {
+    } else if (this.newUserFields.name == "" || this.newUserFields.surname == "" || this.newUserFields.email == "" || this.newUserFields.rut == "" || this.newUserFields.password == "" || this.newUserFields.confirmpassword == "") {
       this.Validmessage = 1
 
     }
@@ -50,7 +53,7 @@ export class SignInPage implements OnInit {
     else {
       this.Validmessage = 0
       await this.AuthenticationService.createUser(this.newUserFields.email, this.newUserFields.password);
-      await this.DataService.createFirebaseUser(await this.AuthenticationService.getUid(), this.newUserFields.name, this.newUserFields.surname)
+      await this.DataService.createFirebaseUser(await this.AuthenticationService.getUid(), this.newUserFields.name, this.newUserFields.surname, this.newUserFields.rut)
       this.router.navigate(['log-in'])
     }
 

@@ -35,9 +35,9 @@ export class DataService {
     return docData(productos);
   }
 
-  createFirebaseUser(id, nombre, apellido) {
+  createFirebaseUser(id, nombre, apellido, rut) {
     const usuario = collection(this.firestore, 'usuario');
-    return setDoc(doc(usuario, id), { nombre: nombre, apellido: apellido })
+    return setDoc(doc(usuario, id), { nombre: nombre, apellido: apellido, rut: rut })
   }
 
   /*createFirebaseProd(id, nombre, apellido) {

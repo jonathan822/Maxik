@@ -17,8 +17,7 @@ export class ProfilePage implements OnInit {
     {
       nombre: '',
       apellido: '',
-      Genero: '',
-      Fecha_nac: '',
+      rut: '',
       email: ''
     }
   ]
