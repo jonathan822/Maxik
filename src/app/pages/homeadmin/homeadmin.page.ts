@@ -42,10 +42,9 @@ export class HomeadminPage implements OnInit {
 
   }
 
-  gowallet(){
-    this.router.navigate(['/wallet']);
+  admwallet(){
+    this.router.navigate(['admwallet']);
   }
-
   logout() {
     this.authenticationService.signOut();
     this.router.navigate(['/log-in']);
